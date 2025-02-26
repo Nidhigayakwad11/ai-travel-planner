@@ -46,7 +46,10 @@ function Header() {
 
   return (
     <div className='p-3 shadow-sm flex justify-between items-center px-4'>
+      <a href="/" className='flex gap-2 items-center'>
       <img src='/logo.svg'/>
+      <span className='font-extrabold italic text-4xl text-sky-500'>Travel <span className='text-orange-500'>Go</span></span>
+      </a>
       <div >
        {user? 
        <div className='flex items-center gap-4'>

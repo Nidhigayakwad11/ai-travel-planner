@@ -58,12 +58,13 @@ function CreateTrip() {
     setLoading(true);
     const FINAL_PROMPT=AI_PROMPT
     .replace('{location}',formData?.location)
-    .replace('{totalDays}',formData?.totalDays)
+    .replace('{totalDays}',formData?.noOfDays)
     .replace('{traveler}',formData?.traveler)
     .replace('{budget}',formData?.budget)
+    
 
     const result=await chatSession.sendMessage(FINAL_PROMPT);
-    // console.log("--",result?.response?.text());
+    console.log("--",result?.response?.text());
     setLoading(false);
     SaveAiTrip(result?.response?.text());
   } 
